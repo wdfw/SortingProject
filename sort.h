@@ -13,10 +13,12 @@ class node{
 } ;
 
 class binaryTree{
+    private :
+	void _dfsSort(node* currentNode, vector<int>& sortedNums) ;
     public :
         node* root ;
         binaryTree(vector<int>nums) ;
-        vector<int> sort(bool reverse) ;	
+        vector<int> sort(void) ;	
 	node* findPosition(int element) ;
 	void addElement(int element) ;
 } ;
