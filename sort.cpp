@@ -1,8 +1,10 @@
 #include "sort.h"
+
 void showVector(vector<int>& v){
     for(auto &it : v) cout << it << " " ;
     cout << "\n" ;
 }
+
 vector<int> lineToVector(string str){
     vector<int> nums ;
     int begin = 0 ;
@@ -16,6 +18,7 @@ vector<int> lineToVector(string str){
     }
     return nums ;
 }
+
 int main(int argc, char** argv){
     ifstream listFile ;
     listFile.open("testing.txt") ;
