@@ -1,6 +1,6 @@
 #include "sort.h"
 
-void showVector(vector<int>& v){
+void showVector(vector<int> v){
     for(auto &it : v) cout << it << " " ;
     cout << "\n" ;
 }
@@ -26,7 +26,9 @@ int main(int argc, char** argv){
     vector<int> nums ;
     while(getline(listFile, line)){
         nums = lineToVector(line) ;
-	showVector(nums) ;
+	binaryTree t(nums) ;
+
+	showVector(t.sort()) ;
     }
     listFile.close() ;
     return 0 ;

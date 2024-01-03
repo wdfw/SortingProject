@@ -27,15 +27,17 @@ void binaryTree::addElement(int element){
 binaryTree::binaryTree(vector<int>nums){
     this->root = new node(nums[0]) ;
     for(int i=1; i<nums.size(); i++){
-        this->addElement(nums[1]) ;
+        this->addElement(nums[i]) ;
     }
 }
 void binaryTree::_dfsSort(node* currentNode, vector<int>& sortedNums){
     if(currentNode->left) this->_dfsSort(currentNode->left, sortedNums) ;
+   
     sortedNums.push_back(currentNode->val) ;
     if(currentNode->right) this->_dfsSort(currentNode->right, sortedNums) ;
 }
 vector<int> binaryTree::sort(void){
+
     vector<int> sortedNums ;
     this->_dfsSort(this->root, sortedNums) ;
     return sortedNums ;
