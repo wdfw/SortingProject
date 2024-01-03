@@ -18,6 +18,17 @@ vector<int> lineToVector(string str){
     }
     return nums ;
 }
+void _mergeSort(vector<int>& nums, vector<int>& lnums, vector<int>& rnums){
+    if(l==r-1) return ;
+    vector<int> tmp(r-l) ;
+
+
+}
+vecotr<int> mergeSort(vector<int>& nums){
+    vector<int> sortedNums = nums ;
+    _mergeSort(sortedNums, 0, nums.size()) ;
+    return _mergeSort ;
+}
 
 int main(int argc, char** argv){
     ifstream listFile ;
